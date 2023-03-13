@@ -1,81 +1,118 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar.astro'
+import Banner from '../components/Banner.astro'
+
+
+import whatsapp from '../assets/home/whatsapp.png'
+import ddwapp from '../assets/home/ddwapp.png'
+import bgwapp from '../assets/home/bgwapp.png'
+
+/* import ISOTIPO from '../assets/ISOTIPO.astro' */
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+<Layout title='LAIT'>
+	<Banner />
+	<Navbar />
+	<main
+		class='h-screen flex flex-col justify-end pb-28 content-center relative'
+	>
+		<div class='w-2/3 pr-3 flex flex-col gap-2'>
+			<h3 class='text-[40px] text-blanco'>It's not just AI</h3>
+			<div id='textos' class='relative'>
+				<h2
+					class='text-[50px] absolute top-[-4px] left-[-4px] text-fucsia z-10'
+				>
+					<span class='text-[80px]'>Vanguard</span>
+					<span class='text-[40px]'>Technology</span> Improving HUMAN lifes
+				</h2>
+				<h2 class='text-[50px] absolute top-0 left-0 text-blanco z-20'>
+					<span class='text-[80px]'>Vanguard</span>
+					<span class='text-[40px]'>Technology</span> Improving HUMAN lifes
+				</h2>
+				<h2 class='text-[50px] absolute top-[4px] left-[4px] text-azulito z-10'>
+					<span class='text-[80px]'>Vanguard</span>
+					<span class='text-[40px]'>Technology</span> Improving HUMAN lifes
+				</h2>
+			</div>
+			<p class='text-blanco text-[22px] w-[532px] h-[96px]'>
+				Our technologies always researching <span></span> auto-improvement giving
+				real value at the service of the people.
+			</p>
+		</div>
+		<div id='button' class='relative flex my-12'>
+			<span id='sub1'></span>
+			<button
+				class='p-3 bg-morado w-[247px] h-[64px] font-bold text-[22px] text-blanco'
+			>
+				LETS START</button
+			>
+			<span id='sub2'></span>
+		</div>
+		<div id='isotipo'></div>
+		<div class="w-[85px] h-[85px] absolute right-2 bottom-4 cursor-pointer">
+			<img src={whatsapp.src} class="absolute left-0 right-0 mx-auto bottom-5 z-20">
+			<img id="dropshadow" src={ddwapp.src} class="absolute -bottom-2 left-0 right-0">
+			<img src={bgwapp.src} class="absolute ">
+		</div>
 	</main>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+		background: url('../assets/home/HOME.png');
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-left: 75px;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+	h2 {
+		line-height: 3.65rem;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	h3,
+	p {
+		font-family: 'Rajdhani';
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+	p {
+		height: 96px;
+		/* transform: translateY(-2.5rem); 462 */
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
+	p > span {
+		display: block;
 	}
-	.instructions strong {
-		color: rgb(var(--accent));
+	#textos {
+		font-family: 'Chakra Petch';
+		height: 131px;
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	button {
+		font-family: 'Chakra Petch';
+	}
+	#sub1 {
+		background: url('../assets/home/Subtract.png');
+		display: inline-block;
+		width: 16px;
+		height: 64px;
+		transform: translateX(2px);
+	}
+	#sub2 {
+		background: url('../assets/home/Subtract-1.png');
+		width: 16px;
+		height: 64px;
+		display: inline-block;
+		transform: translateX(-2px);
+	}
+	#isotipo {
+		background: url('../assets/home/ISO.svg');
+		background-repeat: no-repeat;
+		width: 672px;
+		height: 742px;
+		position: absolute;
+		bottom: -5rem;
+		right: -160px;
+		transform: scale(1.05);
+		filter: blur(2px);
+	}
+	#dropshadow{
+		transform: scale(1.4);
 	}
 </style>

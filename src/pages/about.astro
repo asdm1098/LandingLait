@@ -1,0 +1,420 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/NavbarAbout.astro'
+import Banner from '../components/BannerAbout.astro'
+import HeroAbout from '../components/HeroAbout.astro'
+import Footer from '../components/Footer.astro'
+
+/* SOME FACTS */
+import Persona from '../assets/somefacts/PERSONA/persona.astro'
+import Cabeza from '../assets/somefacts/CABEZA/cabeza.astro'
+import Chart from '../assets/somefacts/CHART/chart.astro'
+import borde from '../assets/somefacts/PERSONA/borde.png'
+import Borde1 from '../assets/somefacts/PERSONA/borde.astro'
+import Borde2 from '../assets/somefacts/CABEZA/borde.astro'
+import Borde3 from '../assets/somefacts/CHART/borde.astro'
+
+/* The horizon */
+import bordecito from '../assets/thehorizon/bordecito.png'
+import cara from '../assets/thehorizon/cara.png'
+import circulo from '../assets/thehorizon/circulo.png'
+import esquinarosa from '../assets/thehorizon/esquinarosa.png'
+import esquinatop from '../assets/thehorizon/esquinatop.png'
+import esquinazul from '../assets/thehorizon/esquinazul.png'
+import miniesquinarosa from '../assets/thehorizon/miniesquinarosa.png'
+import rectanguloazul from '../assets/thehorizon/rectanguloazul.png'
+import rectangulorosas from '../assets/thehorizon/rectangulorosas.png'
+
+/* MO */
+
+import triangulo from '../assets/mo/triangulo.png'
+import casco from '../assets/mo/casco.png'
+import MOesquinazul from '../assets/mo/esquinazul.png'
+import MOrectangulorosa from '../assets/mo/rectangulorosa.png'
+import MOrectanguloazul from '../assets/mo/rectanguloazul.png'
+import MOesquinarosa from '../assets/mo/esquinarosa.png'
+
+/* HBTM */
+
+import person1 from '../assets/hbtm/person1.png'
+import person2 from '../assets/hbtm/person2.png'
+import person3 from '../assets/hbtm/person3.png'
+import person4 from '../assets/hbtm/person4.png'
+
+import p1esquina from '../assets/hbtm/p1esquina.png'
+import p1esquinainferior from '../assets/hbtm/p1esquinainferior.png'
+import p1esquinamasinferior from '../assets/hbtm/p1esquinamasinferior.png'
+import p2esquina from '../assets/hbtm/p2esquina.png'
+import p2esquinainferior from '../assets/hbtm/p2esquinainferior.png'
+import p3esquina from '../assets/hbtm/p3esquina.png'
+import p3esquinainferior from '../assets/hbtm/p3esquinainferior.png'
+import p4esquina from '../assets/hbtm/p4esquina.png'
+import p4esquinainferior from '../assets/hbtm/p4esquinainferior.png'
+import punticas from '../assets/hbtm/punticas.png'
+import punticasacostadas from '../assets/hbtm/punticasacostadas.png'
+
+/* TESTIMONIALS */
+
+import persona from '../assets/testimonials/persona.png'
+import TMborde from '../assets/testimonials/borde.png'
+import arrowleft from '../assets/testimonials/arrowleft.png'
+import arrowright from '../assets/testimonials/arrowright.png'
+import amazon from '../assets/testimonials/amazon.png'
+---
+
+<Layout title='About | LAIT'>
+	<Banner />
+	<Navbar />
+	<main class="relative">
+		<HeroAbout />
+		<section id='section2' class='relative'>
+			<h3 class='text-blanco text-center mb-16 text-[26px]'>Some facts</h3>
+			<div class='flex justify-center gap-20'>
+				<div class='text-center'>
+					<picture
+						class='mb-6 relative flex justify-center items-center h-[160px]'
+					>
+						<Persona />
+						<img src={borde.src} alt='' />
+						<!-- <Borde1 /> -->
+					</picture>
+					<h4 class='text-[26px] text-blanco'>200 employees</h4>
+					<span class='text-[15px] text-gris'>Highly qualified</span>
+				</div>
+				<div class='text-center'>
+					<picture
+						class='mb-6 relative flex justify-center items-center h-[160px]'
+					>
+						<Cabeza />
+						<Borde2 />
+					</picture>
+					<h4 class='text-[26px] text-blanco'>Knowledge creators</h4>
+					<span class='text-[15px] text-gris'>Three consecutive years</span>
+				</div>
+				<div class='text-center w-[220px]'>
+					<picture
+						class='mb-6 relative flex justify-center items-center h-[160px]'
+					>
+						<Chart />
+						<Borde3 />
+					</picture>
+					<h4 class='text-[26px] text-blanco'>$ 10M USD</h4>
+					<span class='text-[15px] text-gris'>For investment</span>
+				</div>
+			</div>
+		</section>
+		<section class='relative flex gap-8 overflow-x-hidden'>
+			<div>
+				<picture
+					class='mb-6 relative flex justify-center items-center w-[570px] h-[800px]'
+				>
+					<img
+						src={bordecito.src}
+						alt=''
+						class='absolute top-[7.5rem] -left-[1.5rem] w-[469px] z-10 h-[549px]'
+					/>
+					<img
+						src={cara.src}
+						alt=''
+						class='absolute top-36 -left-4 w-[439px] h-[505px]'
+					/>
+					<img
+						src={circulo.src}
+						alt=''
+						class='absolute top-0 left-0 w-[563px] h-[793px]'
+					/>
+				</picture>
+			</div>
+			<div id='horizon' class='flex items-center justify-center'>
+				<picture
+					class='mb-6 relative flex flex-col gap-2 justify-center items-start w-[570px]'
+				>
+					<img
+						src={esquinarosa.src}
+						alt=''
+						class='absolute -bottom-[1.5rem] -left-[1.5rem]'
+					/>
+					<img
+						src={esquinatop.src}
+						alt=''
+						class='absolute top-[2.5rem] -right-8'
+					/>
+					<img src={esquinazul.src} alt='' class='absolute -top-4 -left-8' />
+					<img
+						src={miniesquinarosa.src}
+						alt=''
+						class='absolute -bottom-[2.3rem] -left-[2.7rem]'
+					/>
+					<img src={rectanguloazul.src} alt='' class='' />
+					<img src={rectangulorosas.src} alt='' class='' />
+					<h3
+						class='absolute top-[.7rem] left-[1.3rem] text-azulito text-[26px]'
+					>
+						The horizon
+					</h3>
+					<p class='absolute text-blanco text-[15px] top-20 px-4 py-3'>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+						turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+						nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+						tellus elit sed risus. Maecenas eget condimentum velit, sit amet
+						feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
+						conubia nostra, per inceptos himenaeos.
+					</p>
+				</picture>
+			</div>
+		</section>
+		<section
+			id='mainobjective'
+			class='relative flex overflow-x-hidden justify-end'
+		>
+			<div class='flex items-center justify-center'>
+				<div
+					id='mainobjectivetext'
+					class='mb-6 relative flex flex-col gap-2 justify-center items-end w-[570px]'
+				>
+					<img
+						src={MOesquinarosa.src}
+						alt=''
+						class='absolute -top-4 -right-8'
+					/>
+					<img
+						src={MOesquinazul.src}
+						alt=''
+						class='absolute -bottom-6 -right-8'
+					/>
+					<img src={MOrectangulorosa.src} alt='' class='' />
+					<img src={MOrectanguloazul.src} alt='' class='' />
+					<h3
+						class='absolute top-[.7rem] right-[1.3rem] text-fucsia text-[26px]'
+					>
+						Main objective
+					</h3>
+					<p
+						class='absolute text-blanco text-[15px] top-20 px-4 py-3 text-right'
+					>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+						turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+						nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+						tellus elit sed risus. Maecenas eget condimentum velit, sit amet
+						feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
+						conubia nostra, per inceptos himenaeos.
+					</p>
+				</div>
+			</div>
+			<div class=''>
+				<picture
+					class='mb-6 relative flex justify-center items-center w-[559px] h-[800px]'
+				>
+					<img
+						src={triangulo.src}
+						alt=''
+						class='absolute top-[6.5rem] -right-[1.5rem] w-[539px] z-10 h-[658px]'
+					/>
+					<img
+						src={casco.src}
+						alt=''
+						class='absolute top-28 -right-8 w-[559px] h-[608px]'
+					/>
+				</picture>
+			</div>
+		</section>
+		<section id='hbtm' class='relative'>
+			<h3 class='text-[26px] text-blanco text-center'>
+				Humans behind the magic
+			</h3>
+			<div
+				id='hbtmfotos'
+				class='w-full flex justify-center items-center mt-20 gap-[7.3rem]'
+			>
+				<picture class='relative'>
+					<img
+						src={p1esquina.src}
+						class='absolute -top-[1.3rem] -right-[1.49rem]'
+					/>
+					<img src={p1esquinainferior.src} class='absolute -bottom-4 -left-4' />
+					<img
+						src={p1esquinamasinferior.src}
+						class='absolute -bottom-[1.7rem] -left-8'
+					/>
+					<img src={person1.src} class='' />
+				</picture>
+				<picture class='relative'>
+					<img
+						src={p2esquina.src}
+						class='absolute -top-[.9rem] -left-[1.2rem]'
+					/>
+					<img
+						src={p2esquinainferior.src}
+						class='absolute -bottom-[.9rem] -right-[1.3rem]'
+					/>
+
+					<img src={person2.src} class='' />
+				</picture>
+				<picture class='relative'>
+					<img src={p3esquina.src} class='absolute -top-[1.3rem] -right-7' />
+					<img
+						src={p3esquinainferior.src}
+						class='absolute -bottom-[1.2rem] -left-[.9rem]'
+					/>
+
+					<img src={person3.src} class='' />
+				</picture>
+				<picture class='relative'>
+					<img src={p4esquina.src} class='absolute -top-4 -left-[1.2rem]' />
+					<img
+						src={p4esquinainferior.src}
+						class='absolute -bottom-4 -right-4'
+					/>
+					<img src={punticasacostadas.src} class='absolute -bottom-4' />
+					<img src={punticas.src} class='absolute -top-0 -right-4' />
+
+					<img src={person4.src} class='' />
+				</picture>
+			</div>
+			<div class='w-full flex justify-center items-center gap-[7.3rem] mt-8'>
+				<div class='w-[147px] text-center'>
+					<p class='text-[18px] text-blanco'>Andres Anaya</p>
+					<span class='text-[15px] text-blanco'>CEO</span>
+				</div>
+				<div class='w-[147px] text-center'>
+					<p class='text-[18px] text-blanco'>Michael Scott</p>
+					<span class='text-[15px] text-blanco'>Regional Manager</span>
+				</div>
+				<div class='w-[147px] text-center'>
+					<p class='text-[18px] text-blanco'>Juan F. Gallego</p>
+					<span class='text-[15px] text-blanco'>UX/UI designer</span>
+				</div>
+				<div class='w-[147px] text-center'>
+					<p class='text-[18px] text-blanco'>Jordan Belfont</p>
+					<span class='text-[15px] text-blanco'>Sales Officer Chief</span>
+				</div>
+			</div>
+		</section>
+		<section id='testimonials'>
+			<h3 class='text-[26px] text-blanco text-center'>Testimonials</h3>
+			<article class='relative flex justify-evenly items-center mt-20'>
+				<img src={arrowleft.src} class='w-[30px] h-[30px]' />
+				<div class='relative flex justify-center'>
+					<picture class='relative w-[223px]'>
+						<img
+							src={TMborde.src}
+							class='absolute -top-[2.7rem] w-[223px] h-[228px]'
+						/>
+						<img src={persona.src} class='mx-auto w-[140px] h-[143px]' />
+					</picture>
+					<div class='flex flex-col justify-between h-[161px]'>
+						<div>
+							<h4 class='text-[26px] text-blanco'>Jeff Bezos</h4>
+							<p class='text-[12px] text-blanco max-w-[338px]'>
+								“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+								eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+								metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
+								interdum tellus elit sed risus. Maecenas eget condimentum velit,
+								sit amet feugiat lectus.”
+							</p>
+						</div>
+						<img src={amazon.src} width={amazon.width} height={amazon.height} />
+					</div>
+				</div>
+				<img src={arrowright.src} class='w-[30px] h-[30px]' />
+			</article>
+		</section>
+		<Footer />
+	</main>
+</Layout>
+<style>
+	h3,
+	h4 {
+		font-family: 'Chakra Petch';
+	}
+	p {
+		font-family: 'Rajdhani';
+	}
+	span {
+		font-family: 'Rajdhani';
+	}
+	#section2::before {
+		content: '';
+		position: absolute;
+		top: 15rem;
+		background: url('../assets/somefacts/bolitas.png');
+		background-repeat: no-repeat;
+		filter: blur(650px);
+		width: 100%;
+		height: 2870px;
+		z-index: -30;
+	}
+	#horizon::before {
+		content: '';
+		position: absolute;
+		top: 1rem;
+		overflow: hidden;
+		right: 0rem;
+		background: url('../assets/thehorizon/fonditocircular.png');
+		background-repeat: no-repeat;
+		width: 478px;
+		height: 448px;
+		transform: translateX(6rem);
+	}
+	#mainobjective {
+		transform: translateY(-11rem);
+	}
+	#mainobjectivetext {
+		transform: translateX(3rem);
+	}
+	#hbtm::before {
+		content: '';
+		position: absolute;
+		top: -4rem;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background: url('../assets/hbtm/luzfondo.png');
+		background-repeat: no-repeat;
+		width: 524px;
+		filter: blur(100px);
+		height: 524px;
+		z-index: -10;
+	}
+	#hbtm::after {
+		content: '';
+		position: absolute;
+		top: -4rem;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background: url('../assets/hbtm/circulo.png');
+		background-repeat: no-repeat;
+		width: 540px;
+		height: 540px;
+		z-index: -10;
+	}
+	#hbtm {
+		transform: translateY(-11rem);
+	}
+	#hbtmfotos::before {
+		content: '';
+		position: absolute;
+		top: -1rem;
+		left: 0;
+		background: url('../assets/hbtm/neurons_left.png');
+		background-repeat: no-repeat;
+		width: 255px;
+		height: 483px;
+		z-index: -10;
+	}
+	#hbtmfotos::after {
+		content: '';
+		position: absolute;
+		top: -1rem;
+		right: 0;
+		background: url('../assets/hbtm/neurons_right.png');
+		background-repeat: no-repeat;
+		width: 255px;
+		height: 483px;
+		z-index: -10;
+	}
+	#hbtm p {
+		font-family: 'Chakra Petch';
+	}
+</style>

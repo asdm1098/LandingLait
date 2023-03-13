@@ -1,0 +1,47 @@
+---
+import iso1 from '../assets/footer/iso1.png'
+import iso2 from '../assets/footer/iso2.png'
+import iso3 from '../assets/footer/iso3.png'
+import logos from '../assets/footer/logos.png'
+---
+
+<footer class="mt-20 flex flex-col gap-6 w-full">
+    <div class="relative w-[134px] h-[187px] mx-auto">
+        <img src={iso1.src} class="absolute top-0 left-0 right-0 mx-auto z-20">
+        <img src={iso3.src} class="absolute -top-[0.16rem] -left-[0.16rem] right-0 mx-auto z-10">
+        <img src={iso2.src} class="absolute top-[0.14rem] left-0 -right-[0.14rem] mx-auto z-10">
+    </div>
+    <nav class="my-4">
+        <ul class="flex gap-24 text-[18px] text-blanco justify-center">
+            <li>Home</li>
+            <li>Services</li>
+            <li>API</li>
+            <li>About</li>
+            <li>Contact Us</li>
+        </ul>
+    </nav>
+    <img src={logos.src} class="mx-auto">
+    <div  class="flex justify-between text-blanco px-6 mt-8 mb-8">
+        <p>Copyright 2023 LAIT Inc. All rights reserved</p>
+        <span>Terms of Use and Privacy Policy</span>
+    </div>
+</footer>
+
+<style>
+    footer::before{
+        z-index: -1;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 853px;
+        background: url('../assets/footer/bg.png');
+		background-repeat: no-repeat;
+        background-size: cover;
+    }
+    span, li{
+        font-family: 'Chakra Petch';
+    }
+    
+</style>

@@ -1,0 +1,42 @@
+---
+import ISOabout from '../assets/heroabout/ISOabout.png'
+import arrowdown from '../assets/heroabout/arrowdown.png'
+---
+
+<section id="section1" class="h-[90vh] flex flex-col pt-16 items-center gap-12 ">
+    <img
+        src={ISOabout.src}
+        alt='isotipo LAIT'
+        class={`w-[${ISOabout.width}px] h-[${ISOabout.height}px]`}
+    />
+    <p class="w-[971px] text-center text-blanco text-[15px] leading-[1.8]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
+        molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+        fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
+        elit sed risus. Maecenas eget condimentum velit, sit amet feugiat
+        lectus. Class aptent taciti sociosqu ad litora torquent per conubia
+        nostra, per inceptos himenaeos. Praesent auctor purus luctus enim
+        egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse
+        ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi
+        convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+    </p>
+    <div class="flex flex-col items-center gap-2">
+        <span class="text-blanco text-[26px]">See more</span>
+        <img src={arrowdown.src} alt="">
+    </div>
+</section>
+
+<style>
+    #section1{
+        background: url('../assets/heroabout/bgabout.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #section1 span{
+        font-family: 'Chakra Petch';
+    }
+    p {
+		font-family: 'Rajdhani';
+	}
+
+</style>
