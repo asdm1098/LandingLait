@@ -2,9 +2,11 @@
 import Calendar from '../assets/Calendar.astro'
 ---
 
-<div class="flex gap-4 justify-center py-3.5 bg-bgcolor-333 z-50">
-    <Calendar />
-    <p class="text-[15px] text-blanco">Don't lose our next event on January 13th about: Deep Learning and the next GPU Generation</p>
+<div class="flex flex-col md:flex-row items-center md:items-start gap-4 justify-center py-3.5 bg-bgcolor-333 z-50">
+    <picture class="hidden md:block">
+        <Calendar />
+    </picture>
+    <p class="text-[15px] text-blanco text-center">Don't lose our next event on January 13th about: Deep Learning and the next GPU Generation</p>
     <a href="/" class="text-fucsia ml-2 font-bold text-[15px]">Save Your Spot</a>
 </div>
 

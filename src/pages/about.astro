@@ -65,11 +65,13 @@ import amazon from '../assets/testimonials/amazon.png'
 <Layout title='About | LAIT'>
 	<Banner />
 	<Navbar />
-	<main class="relative">
+	<main class='relative'>
 		<HeroAbout />
-		<section id='section2' class='relative'>
+		<section id='section2' class='relative mt-32 md:mt-0'>
 			<h3 class='text-blanco text-center mb-16 text-[26px]'>Some facts</h3>
-			<div class='flex justify-center gap-20'>
+			<div
+				class='flex flex-col md:flex-row items-center md:items-start justify-center gap-20'
+			>
 				<div class='text-center'>
 					<picture
 						class='mb-6 relative flex justify-center items-center h-[160px]'
@@ -104,7 +106,7 @@ import amazon from '../assets/testimonials/amazon.png'
 			</div>
 		</section>
 		<section class='relative flex gap-8 overflow-x-hidden'>
-			<div>
+			<div id='horizonimg'>
 				<picture
 					class='mb-6 relative flex justify-center items-center w-[570px] h-[800px]'
 				>
@@ -167,7 +169,7 @@ import amazon from '../assets/testimonials/amazon.png'
 			id='mainobjective'
 			class='relative flex overflow-x-hidden justify-end'
 		>
-			<div class='flex items-center justify-center'>
+			<div id="mo" class='flex items-center justify-center'>
 				<div
 					id='mainobjectivetext'
 					class='mb-6 relative flex flex-col gap-2 justify-center items-end w-[570px]'
@@ -201,7 +203,7 @@ import amazon from '../assets/testimonials/amazon.png'
 					</p>
 				</div>
 			</div>
-			<div class=''>
+			<div id='mainobjectiveimg'>
 				<picture
 					class='mb-6 relative flex justify-center items-center w-[559px] h-[800px]'
 				>
@@ -224,7 +226,7 @@ import amazon from '../assets/testimonials/amazon.png'
 			</h3>
 			<div
 				id='hbtmfotos'
-				class='w-full flex justify-center items-center mt-20 gap-[7.3rem]'
+				class='w-full flex flex-col md:flex-row justify-center items-center mt-20 gap-[7.3rem]'
 			>
 				<picture class='relative'>
 					<img
@@ -271,7 +273,9 @@ import amazon from '../assets/testimonials/amazon.png'
 					<img src={person4.src} class='' />
 				</picture>
 			</div>
-			<div class='w-full flex justify-center items-center gap-[7.3rem] mt-8'>
+			<div
+				class='w-full flex flex-col md:flex-row absolute md:relative top-64 md:top-0 gap-[13.5rem] justify-center items-center md:gap-[7.3rem] mt-8'
+			>
 				<div class='w-[147px] text-center'>
 					<p class='text-[18px] text-blanco'>Andres Anaya</p>
 					<span class='text-[15px] text-blanco'>CEO</span>
@@ -292,9 +296,13 @@ import amazon from '../assets/testimonials/amazon.png'
 		</section>
 		<section id='testimonials'>
 			<h3 class='text-[26px] text-blanco text-center'>Testimonials</h3>
-			<article class='relative flex justify-evenly items-center mt-20'>
+			<article
+				class='relative flex flex-col md:flex-row justify-evenly items-center mt-12 md:mt-20'
+			>
 				<img src={arrowleft.src} class='w-[30px] h-[30px]' />
-				<div class='relative flex justify-center'>
+				<div
+					class='relative flex flex-col md:flex-row items-center mt-12 md:mt-0 md:items-start justify-center'
+				>
 					<picture class='relative w-[223px]'>
 						<img
 							src={TMborde.src}
@@ -302,8 +310,10 @@ import amazon from '../assets/testimonials/amazon.png'
 						/>
 						<img src={persona.src} class='mx-auto w-[140px] h-[143px]' />
 					</picture>
-					<div class='flex flex-col justify-between h-[161px]'>
-						<div>
+					<div
+						class='flex flex-col items-center md:items-start my-12 md:my-0 justify-between h-[161px]'
+					>
+						<div class='text-center md:text-start'>
 							<h4 class='text-[26px] text-blanco'>Jeff Bezos</h4>
 							<p class='text-[12px] text-blanco max-w-[338px]'>
 								“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -416,5 +426,33 @@ import amazon from '../assets/testimonials/amazon.png'
 	}
 	#hbtm p {
 		font-family: 'Chakra Petch';
+	}
+	@media (max-width: 590px) {
+		* {
+			max-width: 450px !important;
+		}
+
+		/* #section2 {
+			transform: scale(0.5);
+		} */
+		#hbtm::after,
+		#hbtm::before,
+		#hbtmfotos::before,
+		#hbtmfotos::after,
+		#mainobjectiveimg,
+		#horizonimg {
+			display: none;
+		}
+		
+		#horizon, #mo{
+			transform: scale(0.75);
+			height: 400px;
+			
+		}
+
+		#horizon p, #mo p{
+			font-size: 12px;
+		}
+
 	}
 </style>

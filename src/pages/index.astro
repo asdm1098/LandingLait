@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro'
 import Navbar from '../components/Navbar.astro'
 import Banner from '../components/Banner.astro'
 
-
 import whatsapp from '../assets/home/whatsapp.png'
 import ddwapp from '../assets/home/ddwapp.png'
 import bgwapp from '../assets/home/bgwapp.png'
@@ -17,25 +16,28 @@ import bgwapp from '../assets/home/bgwapp.png'
 	<main
 		class='h-screen flex flex-col justify-end pb-28 content-center relative'
 	>
-		<div class='w-2/3 pr-3 flex flex-col gap-2'>
-			<h3 class='text-[40px] text-blanco'>It's not just AI</h3>
+		<div class='w-full md:w-2/3 pr-3 flex flex-col gap-2'>
+			<h3 class='text-[20px] md:text-[40px] text-blanco'>It's not just AI</h3>
 			<div id='textos' class='relative'>
 				<h2
-					class='text-[50px] absolute top-[-4px] left-[-4px] text-fucsia z-10'
+					class='text-[19px] md:text-[50px] absolute top-[-4px] left-[-4px] text-fucsia z-10'
 				>
-					<span class='text-[80px]'>Vanguard</span>
-					<span class='text-[40px]'>Technology</span> <span class="block">Improving HUMAN lifes</span> 
+					<span class='text-[45px] md:text-[80px]'>Vanguard</span>
+					<span class='text-[25px] md:text-[40px]'>Technology</span>
+					<span class='block'>Improving HUMAN lifes</span>
 				</h2>
-				<h2 class='text-[50px] absolute top-0 left-0 text-blanco z-20'>
-					<span class='text-[80px]'>Vanguard</span>
-					<span class='text-[40px]'>Technology</span> <span class="block">Improving HUMAN lifes</span> 
+				<h2 class='text-[19px] md:text-[50px] absolute top-0 left-0 text-blanco z-20'>
+					<span class='text-[45px] md:text-[80px]'>Vanguard</span>
+					<span class='text-[25px] md:text-[40px]'>Technology</span>
+					<span class='block'>Improving HUMAN lifes</span>
 				</h2>
-				<h2 class='text-[50px] absolute top-[4px] left-[4px] text-azulito z-10'>
-					<span class='text-[80px]'>Vanguard</span>
-					<span class='text-[40px]'>Technology</span> <span class="block">Improving HUMAN lifes</span> 
+				<h2 class='text-[19px] md:text-[50px] absolute top-[4px] left-[4px] text-azulito z-10'>
+					<span class='text-[45px] md:text-[80px]'>Vanguard</span>
+					<span class='text-[25px] md:text-[40px]'>Technology</span>
+					<span class='block'>Improving HUMAN lifes</span>
 				</h2>
 			</div>
-			<p class='text-blanco text-[22px] w-[532px] h-[96px]'>
+			<p class='text-blanco text-[15px] md:text-[22px] w-auto md:w-[532px] h-[96px]'>
 				Our technologies always researching <span></span> auto-improvement giving
 				real value at the service of the people.
 			</p>
@@ -50,10 +52,17 @@ import bgwapp from '../assets/home/bgwapp.png'
 			<span id='sub2'></span>
 		</div>
 		<div id='isotipo'></div>
-		<div class="w-[85px] h-[85px] absolute right-2 bottom-4 cursor-pointer">
-			<img src={whatsapp.src} class="absolute left-0 right-0 mx-auto bottom-5 z-20">
-			<img id="dropshadow" src={ddwapp.src} class="absolute -bottom-2 left-0 right-0">
-			<img src={bgwapp.src} class="absolute ">
+		<div class='w-[85px] h-[85px] absolute right-2 bottom-4 cursor-pointer'>
+			<img
+				src={whatsapp.src}
+				class='absolute left-0 right-0 mx-auto bottom-5 z-20'
+			/>
+			<img
+				id='dropshadow'
+				src={ddwapp.src}
+				class='absolute -bottom-2 left-0 right-0'
+			/>
+			<img src={bgwapp.src} class='absolute' />
 		</div>
 	</main>
 </Layout>
@@ -112,7 +121,16 @@ import bgwapp from '../assets/home/bgwapp.png'
 		transform: scale(1.05);
 		filter: blur(2px);
 	}
-	#dropshadow{
+	#dropshadow {
 		transform: scale(1.4);
+	}
+	@media (max-width: 590px) {
+		main{
+			padding-left: 2rem;
+		}
+		#isotipo{
+			display: none;
+		}
+
 	}
 </style>
