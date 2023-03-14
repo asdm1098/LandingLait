@@ -2,20 +2,89 @@
 import Logo from '../assets/Logotipo_Definitivo 1.astro'
 ---
 
-<header class="fixed top-[0px] md:top-[50px] left-0 right-0 flex flex-col md:flex-row items-center md:items-start justify-between p-6 bg-bgcolor-27  z-50">
-    <a href="/"><Logo /></a>
-    <nav class="my-auto ml-6 py-2 md:ml-0 md:py-0 overflow-x-auto">
-        <ul class="flex flex-nowrap gap-6 text-blanco tracking-wide text-lg w-[350px]">
-            <li>API</li>
-            <li>Services</li>
-            <li><a href="/about">About</a></li>
-            <li>Contact us</li>
-        </ul>
-    </nav>
+<header
+	
+	class='fixed top-[0px] md:top-[50px] left-0 right-0 flex items-center md:items-start justify-between p-6 bg-bgcolor-27 z-50'
+>
+	<a href='/'><Logo /></a>
+
+	<nav
+		class='hidden md:block my-auto ml-6 py-2 md:ml-0 md:py-0 overflow-x-auto'
+	>
+		<ul
+			class='flex flex-nowrap gap-6 text-blanco tracking-wide text-lg w-[350px]'
+		>
+			<li>API</li>
+			<li>Services</li>
+			<li><a href='/about'>About</a></li>
+			<li>Contact us</li>
+		</ul>
+	</nav>
+	<div id='respmenu' class='block md:hidden'>
+		<input type='checkbox' />
+        <svg class='fas fa-bars' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+		<svg class='fas fa-times' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+		<i ></i>
+		<nav>
+			<ul>
+				<li><a href='#'>Item 1</a></li>
+				<li><a href='#'>Item 2</a></li>
+				<li><a href='#'>Item 3</a></li>
+				<li><a href='#'>Item 4</a></li>
+				<li><a href='#'>Item 5</a></li>
+			</ul>
+		</nav>
+	</div>
 </header>
 
 <style>
-    nav{
-        font-family: 'Chakra Petch';
-    }
+	nav {
+		font-family: 'Chakra Petch';
+	}
+	#respmenu input[type='checkbox'],
+	#respmenu .fa-bars,
+	#respmenu .fa-times {
+		position: absolute;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		right: 0;
+		top: 0;
+		width: 48px;
+		height: 48px;
+        fill: white;
+	}
+
+	#respmenu .fa-bars,
+	#respmenu .fa-times {
+		font-size: 48px;
+		pointer-events: none;
+	}
+
+	#respmenu input[type='checkbox'] {
+		opacity: 0;
+	}
+
+	#respmenu {
+		color: white;
+		position: relative;
+		background: #123456;
+		min-height: 48px;
+	}
+
+	#respmenu nav {
+		display: none;
+	}
+
+	#respmenu input:checked ~ nav {
+		display: block;
+	}
+
+	#respmenu input:checked ~ .fa-bars {
+		display: none;
+	}
+
+	#respmenu input:not(:checked) ~ .fa-times {
+		display: none;
+	}
 </style>
