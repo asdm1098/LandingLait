@@ -4,6 +4,7 @@ import Navbar from '../components/NavbarAbout.astro'
 import Banner from '../components/BannerAbout.astro'
 import HeroAbout from '../components/HeroAbout.astro'
 import Footer from '../components/Footer.astro'
+import Testimonials from '../components/Testimonials.astro'
 
 /* SOME FACTS */
 import Persona from '../assets/somefacts/PERSONA/persona.astro'
@@ -53,17 +54,10 @@ import p4esquinainferior from '../assets/hbtm/p4esquinainferior.png'
 import punticas from '../assets/hbtm/punticas.png'
 import punticasacostadas from '../assets/hbtm/punticasacostadas.png'
 
-/* TESTIMONIALS */
-
-import persona from '../assets/testimonials/persona.png'
-import TMborde from '../assets/testimonials/borde.png'
-import arrowleft from '../assets/testimonials/arrowleft.png'
-import arrowright from '../assets/testimonials/arrowright.png'
-import amazon from '../assets/testimonials/amazon.png'
 ---
 
 <Layout title='About | LAIT'>
-	<div class="hidden md:block">
+	<div class='hidden md:block'>
 		<Banner />
 	</div>
 	<Navbar />
@@ -71,9 +65,7 @@ import amazon from '../assets/testimonials/amazon.png'
 		<HeroAbout />
 		<section id='section2' class='relative mt-32 md:mt-0'>
 			<h3 class='text-blanco text-center mb-16 text-[26px]'>Some facts</h3>
-			<div
-				class='flex flex-col md:flex-row items-center md:items-start justify-center gap-20'
-			>
+			<div class='flex flex-col md:flex-row items-center justify-center gap-20'>
 				<div class='text-center'>
 					<picture
 						class='mb-6 relative flex justify-center items-center h-[160px]'
@@ -108,7 +100,7 @@ import amazon from '../assets/testimonials/amazon.png'
 			</div>
 		</section>
 		<section class='relative flex gap-8 overflow-x-hidden'>
-			<div id='horizonimg'>
+			<div id='horizonimg' class="">
 				<picture
 					class='mb-6 relative flex justify-center items-center w-[570px] h-[800px]'
 				>
@@ -129,7 +121,7 @@ import amazon from '../assets/testimonials/amazon.png'
 					/>
 				</picture>
 			</div>
-			<div id='horizon' class='flex items-center justify-center'>
+			<div id='horizon' class='pr-24 md:mr-0 flex items-center justify-center'>
 				<picture
 					class='mb-6 relative flex flex-col gap-2 justify-center items-start w-[570px]'
 				>
@@ -171,7 +163,7 @@ import amazon from '../assets/testimonials/amazon.png'
 			id='mainobjective'
 			class='relative flex overflow-x-hidden justify-end'
 		>
-			<div id="mo" class='flex items-center justify-center'>
+			<div id='mo' class='flex items-center justify-center'>
 				<div
 					id='mainobjectivetext'
 					class='mb-6 relative flex flex-col gap-2 justify-center items-end w-[570px]'
@@ -298,42 +290,12 @@ import amazon from '../assets/testimonials/amazon.png'
 		</section>
 		<section id='testimonials'>
 			<h3 class='text-[26px] text-blanco text-center'>Testimonials</h3>
-			<article
-				class='relative flex flex-col md:flex-row justify-evenly items-center mt-12 md:mt-20'
-			>
-				<img src={arrowleft.src} class='w-[30px] h-[30px]' />
-				<div
-					class='relative flex flex-col md:flex-row items-center mt-12 md:mt-0 md:items-start justify-center'
-				>
-					<picture class='relative w-[223px]'>
-						<img
-							src={TMborde.src}
-							class='absolute -top-[2.7rem] w-[223px] h-[228px]'
-						/>
-						<img src={persona.src} class='mx-auto w-[140px] h-[143px]' />
-					</picture>
-					<div
-						class='flex flex-col items-center md:items-start my-12 md:my-0 justify-between h-[161px]'
-					>
-						<div class='text-center md:text-start'>
-							<h4 class='text-[26px] text-blanco'>Jeff Bezos</h4>
-							<p class='text-[12px] text-blanco max-w-[338px]'>
-								“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-								eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-								metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-								interdum tellus elit sed risus. Maecenas eget condimentum velit,
-								sit amet feugiat lectus.”
-							</p>
-						</div>
-						<img src={amazon.src} width={amazon.width} height={amazon.height} />
-					</div>
-				</div>
-				<img src={arrowright.src} class='w-[30px] h-[30px]' />
-			</article>
+			<Testimonials />
 		</section>
 		<Footer />
 	</main>
 </Layout>
+
 <style>
 	h3,
 	h4 {
@@ -429,14 +391,17 @@ import amazon from '../assets/testimonials/amazon.png'
 	#hbtm p {
 		font-family: 'Chakra Petch';
 	}
+	@media (max-height: 815px){
+		#section2 {
+			margin-top: 22rem;
+		}
+	}
 	@media (max-width: 590px) {
 		* {
 			max-width: 450px !important;
 		}
 
-		/* #section2 {
-			transform: scale(0.5);
-		} */
+		
 		#hbtm::after,
 		#hbtm::before,
 		#hbtmfotos::before,
@@ -445,16 +410,16 @@ import amazon from '../assets/testimonials/amazon.png'
 		#horizonimg {
 			display: none;
 		}
-		
-		#horizon, #mo{
-			transform: scale(0.69);
+
+		#horizon,
+		#mo {
+			transform: scale(0.65);
 			height: 400px;
-			
 		}
 
-		#horizon p, #mo p{
+		#horizon p,
+		#mo p {
 			font-size: 12px;
 		}
-
 	}
 </style>
