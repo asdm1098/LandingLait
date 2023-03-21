@@ -9,11 +9,11 @@ import amazon from '../assets/testimonials/amazon.png'
 <article
 	class='relative flex flex-col md:flex-row justify-evenly items-center mt-12 md:mt-20'
 >
-	<img id='arrowleft' src={arrowleft.src} class='w-[30px] h-[30px]' />
-	<div class='w-[300px] md:w-[500px] h-[500px]'>
+	<img id='arrowleft' src={arrowleft.src} class='w-[30px] h-[30px] cursor-pointer' />
+	<div class='w-[300px] md:w-[500px] h-[450px] md:h-[195px]'>
 		<div
 			id='testimonio'
-			class='flex flex-col md:flex-row items-center mt-12 md:mt-0 justify-center'
+			class='flex flex-col md:flex-row items-center md:items-start mt-12 md:mt-0 justify-center'
 		>
 			<picture class='relative w-[223px]'>
 				<img
@@ -23,11 +23,11 @@ import amazon from '../assets/testimonials/amazon.png'
 				<img src={persona.src} class='mx-auto w-[140px] h-[143px]' />
 			</picture>
 			<div
-				class='flex flex-col items-center my-12 md:my-0 justify-between h-[161px]'
+				class='flex flex-col items-center md:items-start  my-12 gap-6 md:gap-0 md:my-0 justify-between h-[161px]'
 			>
 				<div class='text-center md:text-start'>
 					<h4 class='text-[26px] text-blanco'>Jeff Bezos</h4>
-					<p class='text-[12px] text-blanco max-w-[338px]'>
+					<p class='text-[12px] text-blanco max-w-[300px] md:max-w-[338px]'>
 						“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
 						turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
 						nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
@@ -40,7 +40,7 @@ import amazon from '../assets/testimonials/amazon.png'
 		</div>
 		<div
 			id='testimonio'
-			class='hidden flex-col md:flex-row items-center mt-12 md:mt-0 justify-center'
+			class='hidden flex-col md:flex-row items-center md:items-start mt-12 md:mt-0 justify-center'
 		>
 			<picture class='relative w-[223px]'>
 				<img
@@ -50,38 +50,11 @@ import amazon from '../assets/testimonials/amazon.png'
 				<img src={persona.src} class='mx-auto w-[140px] h-[143px]' />
 			</picture>
 			<div
-				class='flex flex-col items-center my-12 md:my-0 justify-between h-[161px]'
-			>
-				<div class='text-center md:text-start'>
-					<h4 class='text-[26px] text-blanco'>Jeff Bezudo</h4>
-					<p class='text-[12px] text-blanco max-w-[338px]'>
-						“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-						turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-						nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-						tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-						feugiat lectus.”
-					</p>
-				</div>
-				<img src={amazon.src} width={amazon.width} height={amazon.height} />
-			</div>
-		</div>
-		<div
-			id='testimonio'
-			class='hidden flex-col md:flex-row items-center mt-12 md:mt-0 justify-center'
-		>
-			<picture class='relative w-[223px]'>
-				<img
-					src={TMborde.src}
-					class='absolute -top-[2.7rem] w-[223px] h-[228px]'
-				/>
-				<img src={persona.src} class='mx-auto w-[140px] h-[143px]' />
-			</picture>
-			<div
-				class='flex flex-col items-center my-12 md:my-0 justify-between h-[161px]'
+				class='flex flex-col items-center md:items-start my-12 gap-6 md:gap-0 md:my-0 justify-between h-[161px]'
 			>
 				<div class='text-center md:text-start'>
 					<h4 class='text-[26px] text-blanco'>Jeffry Bezos</h4>
-					<p class='text-[12px] text-blanco max-w-[338px]'>
+					<p class='text-[12px] text-blanco max-w-[300px] md:max-w-[338px]'>
 						“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
 						turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
 						nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
@@ -91,10 +64,9 @@ import amazon from '../assets/testimonials/amazon.png'
 				</div>
 				<img src={amazon.src} width={amazon.width} height={amazon.height} />
 			</div>
-		</div>
-		<div
+		</div><div
 			id='testimonio'
-			class='hidden flex-col md:flex-row items-center mt-12 md:mt-0 justify-center'
+			class='hidden flex-col md:flex-row items-center md:items-start mt-12 md:mt-0 justify-center'
 		>
 			<picture class='relative w-[223px]'>
 				<img
@@ -104,38 +76,11 @@ import amazon from '../assets/testimonials/amazon.png'
 				<img src={persona.src} class='mx-auto w-[140px] h-[143px]' />
 			</picture>
 			<div
-				class='flex flex-col items-center my-12 md:my-0 justify-between h-[161px]'
+				class='flex flex-col items-center md:items-start my-12 gap-6 md:gap-0 md:my-0 justify-between h-[161px]'
 			>
 				<div class='text-center md:text-start'>
-					<h4 class='text-[26px] text-blanco'>Jeff picos</h4>
-					<p class='text-[12px] text-blanco max-w-[338px]'>
-						“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-						turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-						nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-						tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-						feugiat lectus.”
-					</p>
-				</div>
-				<img src={amazon.src} width={amazon.width} height={amazon.height} />
-			</div>
-		</div>
-		<div
-			id='testimonio'
-			class='hidden flex-col md:flex-row items-center mt-12 md:mt-0 justify-center'
-		>
-			<picture class='relative w-[223px]'>
-				<img
-					src={TMborde.src}
-					class='absolute -top-[2.7rem] w-[223px] h-[228px]'
-				/>
-				<img src={persona.src} class='mx-auto w-[140px] h-[143px]' />
-			</picture>
-			<div
-				class='flex flex-col items-center my-12 md:my-0 justify-between h-[161px]'
-			>
-				<div class='text-center md:text-start'>
-					<h4 class='text-[26px] text-blanco'>Jefferson Bezos</h4>
-					<p class='text-[12px] text-blanco max-w-[338px]'>
+					<h4 class='text-[26px] text-blanco'>Jeff Picos</h4>
+					<p class='text-[12px] text-blanco max-w-[300px] md:max-w-[338px]'>
 						“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
 						turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
 						nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
@@ -147,7 +92,7 @@ import amazon from '../assets/testimonials/amazon.png'
 			</div>
 		</div>
 	</div>
-	<img id='arrowright' src={arrowright.src} class='w-[30px] h-[30px]' />
+	<img id='arrowright' src={arrowright.src} class='w-[30px] h-[30px] cursor-pointer' />
 </article>
 <script>
 	let testimonial = 0
@@ -190,5 +135,16 @@ import amazon from '../assets/testimonials/amazon.png'
 <style>
 	#testimonio {
 		position: absolute;
+		animation: fade 300ms;
+	}
+	@keyframes fade {
+		0% {
+			opacity: 0;
+			transform: translateX(200px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0px);
+		}
 	}
 </style>
