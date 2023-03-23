@@ -63,10 +63,11 @@ import punticasacostadas from '../assets/hbtm/punticasacostadas.png'
 	<Navbar />
 	<main class='relative'>
 		<HeroAbout />
+
 		<section id='section2' class='relative mt-32 md:mt-0'>
 			<h3 class='text-blanco text-center mb-16 text-[26px]'>Some facts</h3>
 			<div class='flex flex-col md:flex-row items-center justify-center gap-20'>
-				<div class='text-center'>
+				<div class='text-center pic'>
 					<picture
 						class='mb-6 relative flex justify-center items-center h-[160px]'
 					>
@@ -77,7 +78,7 @@ import punticasacostadas from '../assets/hbtm/punticasacostadas.png'
 					<h4 class='text-[26px] text-blanco'>200 employees</h4>
 					<span class='text-[15px] text-gris'>Highly qualified</span>
 				</div>
-				<div class='text-center'>
+				<div class='text-center pic'>
 					<picture
 						class='mb-6 relative flex justify-center items-center h-[160px]'
 					>
@@ -87,7 +88,7 @@ import punticasacostadas from '../assets/hbtm/punticasacostadas.png'
 					<h4 class='text-[26px] text-blanco'>Knowledge creators</h4>
 					<span class='text-[15px] text-gris'>Three consecutive years</span>
 				</div>
-				<div class='text-center w-[220px]'>
+				<div class='text-center pic w-[220px] picture'>
 					<picture
 						class='mb-6 relative flex justify-center items-center h-[160px]'
 					>
@@ -99,6 +100,7 @@ import punticasacostadas from '../assets/hbtm/punticasacostadas.png'
 				</div>
 			</div>
 		</section>
+
 		<section class='relative flex gap-8 overflow-x-hidden'>
 			<div id='horizonimg' class="">
 				<picture
@@ -218,9 +220,10 @@ import punticasacostadas from '../assets/hbtm/punticasacostadas.png'
 			<h3 class='text-[26px] text-blanco text-center'>
 				Humans behind the magic
 			</h3>
+			
 			<div
 				id='hbtmfotos'
-				class='w-full flex flex-col md:flex-row justify-center items-center mt-20 gap-[7.3rem]'
+				class='w-full flex flex-col md:flex-row justify-center items-center mt-20 gap-[7.3rem] '
 			>
 				<picture class='relative'>
 					<img
@@ -267,22 +270,23 @@ import punticasacostadas from '../assets/hbtm/punticasacostadas.png'
 					<img src={person4.src} class='' />
 				</picture>
 			</div>
+
 			<div
 				class='w-full flex flex-col md:flex-row absolute md:relative top-64 md:top-0 gap-[13.5rem] justify-center items-center md:gap-[7.3rem] mt-8'
 			>
-				<div class='w-[147px] text-center'>
+				<div class='w-[147px] text-center pic'>
 					<p class='text-[18px] text-blanco'>Patrick Wenleck</p>
 					<span class='text-[15px] text-blanco'>CEO</span>
 				</div>
-				<div class='w-[147px] text-center'>
+				<div class='w-[147px] text-center pic'>
 					<p class='text-[18px] text-blanco'>Michael Scott</p>
 					<span class='text-[15px] text-blanco'>Regional Manager</span>
 				</div>
-				<div class='w-[147px] text-center'>
+				<div class='w-[147px] text-center pic'>
 					<p class='text-[18px] text-blanco'>Juan F. Gallego</p>
 					<span class='text-[15px] text-blanco'>UX/UI designer</span>
 				</div>
-				<div class='w-[147px] text-center'>
+				<div class='w-[147px] text-center pic'>
 					<p class='text-[18px] text-blanco'>Jordan Belfont</p>
 					<span class='text-[15px] text-blanco'>Sales Officer Chief</span>
 				</div>
@@ -297,6 +301,14 @@ import punticasacostadas from '../assets/hbtm/punticasacostadas.png'
 </Layout>
 
 <style>
+	.pic:hover {
+		transform: scale(1.1);
+		transition: all 0.3s ease-in-out;
+		animation: shine 0.8s;
+		filter: brightness(1.2);
+
+	}
+
 	h3,
 	h4 {
 		font-family: 'Chakra Petch';
@@ -387,6 +399,11 @@ import punticasacostadas from '../assets/hbtm/punticasacostadas.png'
 		width: 255px;
 		height: 483px;
 		z-index: -10;
+	}
+	#hbtmfotos img:hover {
+		transform: scale(1.1);
+  		transition: all 0.3s ease-in-out;
+		filter: brightness(1.2);
 	}
 	#hbtm p {
 		font-family: 'Chakra Petch';
