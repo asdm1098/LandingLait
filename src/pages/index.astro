@@ -1,4 +1,5 @@
 ---
+import { gsap } from 'gsap'
 import Layout from '../layouts/Layout.astro'
 import Navbar from '../components/Navbar.astro'
 import Banner from '../components/Banner.astro'
@@ -20,42 +21,44 @@ import bgwapp from '../assets/home/bgwapp.png'
 	>
 		<div class='w-full md:w-2/3 pr-3 flex flex-col gap-2'>
 			<h3 class='text-[20px] md:text-[40px] text-blanco'>It's not just AI</h3>
+			
 			<div id='textos' class='relative'>
-				<h2
-					class='text-[21px] md:text-[50px] absolute top-[-2px] md:top-[-4px] left-[-2px] md:left-[-4px] text-fucsia z-10 p-1'
-				>
-					<span class='text-[45px] md:text-[80px]'>Vanguard</span>
-					<span class='text-[25px] md:text-[40px]'>Technology</span>
-					<span class='block'>Improving HUMAN lifes</span>
+				<h2 class='text-[21px] md:text-[50px] absolute top-[-2px] md:top-[-4px] left-[-2px] md:left-[-4px] text-fucsia z-10 p-1 animated-text'>
+				  <span class='text-[45px] md:text-[80px]'>Vanguard</span>
+				  <span class='text-[25px] md:text-[40px]'>Technology</span>
+				  <span class='block'>Improving HUMAN lifes</span>
 				</h2>
-				<h2 class='text-[21px] md:text-[50px] absolute top-0 left-0 text-blanco z-20 p-1'>
-					<span class='text-[45px] md:text-[80px]'>Vanguard</span>
-					<span class='text-[25px] md:text-[40px]'>Technology</span>
-					<span class='block'>Improving HUMAN lifes</span>
+				<h2 class='text-[21px] md:text-[50px] absolute top-0 left-0 text-blanco z-20 p-1 animated-text'>
+				  <span class='text-[45px] md:text-[80px]'>Vanguard</span>
+				  <span class='text-[25px] md:text-[40px]'>Technology</span>
+				  <span class='block'>Improving HUMAN lifes</span>
 				</h2>
-				<h2 class='text-[21px] md:text-[50px] absolute top-[2px] md:top-[4px] left-[2px] md:left-[4px] text-azulito z-10 p-1'>
-					<span class='text-[45px] md:text-[80px]'>Vanguard</span>
-					<span class='text-[25px] md:text-[40px]'>Technology</span>
-					<span class='block'>Improving HUMAN lifes</span>
+				<h2 class='text-[21px] md:text-[50px] absolute top-[2px] md:top-[4px] left-[2px] md:left-[4px] text-azulito z-10 p-1 animated-text'>
+				  <span class='text-[45px] md:text-[80px]'>Vanguard</span>
+				  <span class='text-[25px] md:text-[40px]'>Technology</span>
+				  <span class='block'>Improving HUMAN lifes</span>
 				</h2>
-			</div>
+			  </div>
+			  
+			
 			<p class='text-blanco text-[15px] md:text-[22px] w-auto md:w-[532px] h-[96px] mt-12 md:mt-0'>
 				Our technologies always researching <span></span> auto-improvement giving
 				real value at the service of the people.
 			</p>
 		</div>
+		
 		<div id='button' class='relative flex my-12'>
 			<span id='sub1'></span>
 			<button
-				class='p-3 bg-morado w-[247px] h-[64px] font-bold text-[22px] text-blanco'
+				class='p-3 bg-morado w-[247px] h-[64px] font-bold text-[22px] text-blanco btn-animado'
 				onclick="window.location.href='/about'"
 			>
-				LETS START</button
-			>
+				LETS START
+			</button>
 			<span id='sub2'></span>
 		</div>
 		<div id='isotipo'></div>
-		<div class='w-[85px] h-[85px] absolute right-2 bottom-4 cursor-pointer'>
+		<div class='w-[85px] h-[85px] absolute right-2 bottom-4 cursor-pointer btn-animado'>
 			<img
 				src={whatsapp.src}
 				class='absolute left-0 right-0 mx-auto bottom-5 z-20'
@@ -68,6 +71,27 @@ import bgwapp from '../assets/home/bgwapp.png'
 			<img src={bgwapp.src} class='absolute' />
 		</div>
 	</main>
+	<script>
+		// seleccionar los encabezados h2 con la clase "animated-text"
+		const animatedTexts = document.querySelectorAll('.animated-text');
+	  
+		// configurar la animación para cada encabezado
+		animatedTexts.forEach((text) => {
+		  const chars = text.textContent.split('');
+		  text.textContent = '';
+		  let delay = 0;
+		  chars.forEach((char) => {
+			const span = document.createElement('span');
+			span.textContent = char;
+			span.style.opacity = '0';
+			span.style.animation = `fadeInText 0.5s forwards ${delay}s`;
+			text.appendChild(span);
+			delay += 0.05;
+		  });
+		});
+	  </script>
+	  
+	
 </Layout>
 
 <style>
@@ -87,7 +111,6 @@ import bgwapp from '../assets/home/bgwapp.png'
 	}
 	p {
 		height: 96px;
-		/* transform: translateY(-2.5rem); 462 */
 	}
 	p > span {
 		display: block;
@@ -99,6 +122,19 @@ import bgwapp from '../assets/home/bgwapp.png'
 	button {
 		font-family: 'Chakra Petch';
 	}
+	
+	.btn-animado {
+		transition: transform 0.2s ease-out;
+	}
+	
+	.btn-animado:hover {
+		transform: scale(1.1);
+	}
+	
+	.btn-animado:active {
+		transform: scale(0.95);
+	}
+	
 	#sub1 {
 		background: url('../assets/home/Subtract.png');
 		display: inline-block;
@@ -127,18 +163,26 @@ import bgwapp from '../assets/home/bgwapp.png'
 	#dropshadow {
 		transform: scale(1.4);
 	}
-	/* @media (max-height: 815px){
-		#section2 {
-			padding-bottom: 5rem;
-		}
-	} */
+	
 	@media (max-width: 590px) {
-		main{
+		main {
 			padding-left: 2rem;
 		}
-		#isotipo{
+		#isotipo {
 			display: none;
 		}
-
 	}
-</style>
+	@keyframes fadeInText {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+	}
+
+		.texto-animado {
+		animation: animate-letters 2s infinite;
+		}
+
+	</style>
