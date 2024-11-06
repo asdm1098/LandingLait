@@ -2,7 +2,9 @@
 import iso1 from '../assets/footer/iso1.png'
 import iso2 from '../assets/footer/iso2.png'
 import iso3 from '../assets/footer/iso3.png'
-import logos from '../assets/footer/logos.png'
+import twiter from '../assets/footer/twiter.png'
+import linkedin from '../assets/footer/linkedin.png'
+import ig from '../assets/footer/ig.png'
 ---
 
 <footer class="mt-20 flex flex-col gap-6 w-full">
@@ -20,7 +22,11 @@ import logos from '../assets/footer/logos.png'
             <li class="cursor-pointer nav-link">Contact Us</li>
         </ul>
     </nav>
-    <img src={logos.src} class="mx-auto cursor-pointer">
+    <div class="mx-auto flex">
+        <img src={twiter.src} class="cursor-pointer">
+        <img src={linkedin.src} class="cursor-pointer">
+        <img src={ig.src} class="cursor-pointer">
+    </div>
     <div  class="flex flex-col md:flex-row items-center md:items-start justify-between text-blanco px-6 mt-8 mb-8">
         <p>Copyright 2023 LAIT Inc. All rights reserved</p>
         <span class="cursor-pointer">Terms of Use and Privacy Policy</span>
